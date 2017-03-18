@@ -1,4 +1,4 @@
-import { day } from 'constants';
+import { day } from './index';
 
 // http://softwareengineering.stackexchange.com/a/241386
 export function subtractRange(minuend, subtrahend) {
