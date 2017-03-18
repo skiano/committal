@@ -13,12 +13,12 @@ test('mergeCommitments', (t) => {
   ])
 
   t.deepLooseEqual(plan, {
-    mon: [],
-    tue: [],
-    wed: [],
-    thu: [],
-    fri: [],
-    sat: [],
-    sun: [],
-  }, 'should create flattened days')
+    mon: [[0, 360, null], [360, 540, 'Awake'], [540, 720, 'Work'], [720, 780, 'Food'], [780, 1020, 'Work'], [1020, 1320, 'Awake'], [1320, 1440, null]],
+    tue: [[0, 360, null], [360, 540, 'Awake'], [540, 720, 'Work'], [720, 780, 'Food'], [780, 1020, 'Work'], [1020, 1320, 'Awake'], [1320, 1440, null]],
+    wed: [[0, 360, null], [360, 540, 'Awake'], [540, 720, 'Work'], [720, 780, 'Food'], [780, 1020, 'Work'], [1020, 1320, 'Awake'], [1320, 1440, null]],
+    thu: [[0, 360, null], [360, 540, 'Awake'], [540, 720, 'Work'], [720, 780, 'Food'], [780, 1020, 'Work'], [1020, 1320, 'Awake'], [1320, 1440, null]],
+    fri: [[0, 360, null], [360, 540, 'Awake'], [540, 720, 'Work'], [720, 780, 'Food'], [780, 1020, 'Work'], [1020, 1320, 'Awake'], [1320, 1440, null]],
+    sat: [[0, 540, null], [540, 720, 'Awake'], [720, 780, 'Food'], [780, 1380, 'Awake'], [1380, 1440, null]],
+    sun: [[0, 540, null], [540, 720, 'Awake'], [720, 780, 'Food'], [780, 1380, 'Awake'], [1380, 1440, null]],
+  }, 'should create flatten commitments into plans')
 });
