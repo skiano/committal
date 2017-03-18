@@ -22,16 +22,21 @@ const commitments = [
   [...alldays, ['12PM','1PM', food]],    // commits to eating food from 12pm–1pm everyday
 ];
 
-const timeChunks = mergeCommitments([commitments, commitments]);
+const plan = mergeCommitments([commitments, commitments]);
 
 // in should.js
-// look at mondays time chunks
-timeChunks.mon.should.match([
+plan.mon.should.match([
   ['6AM','9AM', { category: 'awake' }],
   ['9AM','12PM', { category: 'work' }],
   ['12PM','1PM', { category: 'food' }],
   ['1PM','5PM', { category: 'work' }],
   ['5PM','10PM', { category: 'awake' }],
+])
+
+plan.sat.should.match([
+  ['9AM','12PM', { category: 'awake' }],
+  ['12PM','1PM', { category: 'food' }],
+  ['1PM','11PM', { category: 'awake' }],
 ])
 ```
 
