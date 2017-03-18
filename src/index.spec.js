@@ -1,11 +1,11 @@
 import test from 'tape';
-import { combineCommitments } from './index';
+import { mergeCommitments } from './index';
 import { weekdays, weekends, everyday } from './index';
 
-test('combineCommitments', (t) => {
+test('mergeCommitments', (t) => {
   t.plan(1);
 
-  const plan = combineCommitments([
+  const plan = mergeCommitments([
     [...weekdays, ['6:00AM', '10:00PM', 'Awake']],
     [...weekends, ['9:00AM', '11:00PM', 'Awake']],
     [...weekdays, ['9:00AM', '5:00PM', 'Work']],

@@ -6,7 +6,7 @@ export const weekends = ['sat', 'sun'];
 export const everyday = [...weekdays, ...weekends];
 export const dayRange = [0, (24 * 60), null];
 
-export const combineCommitments = (commitments) => {
+export const mergeCommitments = (commitments) => {
   const plan = everyday.reduce((p, day) => (Object.assign(p, {[day]: []})), {});
 
   commitments.forEach(commitment => {
