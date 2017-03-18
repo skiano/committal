@@ -8,6 +8,7 @@ Commital takes a list (or lists) of "commitment" objects and merges them into a 
 const weekdays = ['mon','tues', 'wed', 'thus', 'fri'];
 const weekends = ['sat','sun'];
 const alldays = [...weekdays, ...weekends];
+
 const work = { category: 'work' };
 const food = { category: 'food' };
 
