@@ -24,7 +24,6 @@ const commitments = [
 
 const { mon, sat } = mergeCommitments(commitments);
 
-// in should.js
 deepLooseEqual(mon, [
   ['6AM','9AM', { category: 'awake' }],
   ['9AM','12PM', { category: 'work' }],
