@@ -1,4 +1,4 @@
-# committal
+# committal.js
 
 Commital takes a list (or lists) of "commitment" objects and merges them into a list of time chunks. It assumes that commitments with higher indexes are higher priority.
 
