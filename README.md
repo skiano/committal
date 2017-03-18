@@ -13,10 +13,10 @@ const work = { category: 'work' };
 const food = { category: 'food' };
 
 const commitments = [
-  [...weekdays, ['6AM', '10PM']],
-  [...weekdays, ['9AM', '11PM']],
-  [...weekdays, ['9AM', '5PM', work]],
-  [...alldays, ['12PM', '1PM', food]]
+  [...weekdays, ['6AM','10PM']],
+  [...weekdays, ['9AM','11PM']],
+  [...weekdays, ['9AM','5PM', work]],
+  [...alldays, ['12PM','1PM', food]]
 ];
 
 const timeChunks = commital(commitments);
