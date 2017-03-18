@@ -5,18 +5,15 @@ Commital takes a list (or lists) of "commitment" objects and merges them into a 
 ## example
 
 ```javascript
+const weekdays = ['mon','tues', 'wed', 'thus', 'fri'];
+const weekends = ['sat','sun'];
+const alldays = [...weekdays, ...weekends];
+const work = { category: 'work' };
+const food = { category: 'food' };
 
 const commitments = [
-  {
-    days: ['mon', 'tue', 'wed', 'thu', 'fri'],
-    time: ['8:00 AM', '4:00 PM'],
-    meta: { category: 'work' }
-  },
-  {
-    days: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
-    time: ['8:00 AM', '4:00 PM'],
-    meta: { category: 'work' }
-  },
+  [...weekdays, ['9:00AM','5:00PM', work ]],
+  [...alldays, ['12:00PM','1:00PM', food ]]
 ];
 
 const timeChunks = commital(commitments);
@@ -25,17 +22,6 @@ const timeChunks = commital(commitments);
 timeChunks.mon.should.match([
   
 ])
-
-```
-
-```javacript
-const commitment = ['8:00AM', '9:00AM', { category: 'work' }]
-const plan = ['mon','tues','wed', commitment ]
-
-const plan = ['mon','tues','wed', ['8:00AM', '9:00AM', { category: 'work' }] ]
-
-
-
 ```
 
 
