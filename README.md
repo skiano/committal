@@ -26,6 +26,7 @@ const moreCommitments = [
 const timeChunks = commital([basicCommitments, commitments]);
 
 // in should.js
+// look at mondays time chunks
 timeChunks.mon.should.match([
   ['6AM','9AM', { category: 'awake' }],
   ['9AM','12PM', { category: 'work' }],
