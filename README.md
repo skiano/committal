@@ -23,7 +23,7 @@ const moreCommitments = [
   [...alldays, ['12PM','1PM', food]],    // commits to eating food from 12pm–1pm everyday
 ];
 
-const timeChunks = commital([commitments, basicCommitments]);
+const timeChunks = commital([basicCommitments, commitments]);
 
 // in should.js
 timeChunks.mon.should.match([
