@@ -1,7 +1,7 @@
 import { day } from './index';
 
 // http://softwareengineering.stackexchange.com/a/241386
-export function subtractRange(minuend, subtrahend) {
+export const subtractRange = (minuend, subtrahend) => {
   const m = minuend;
   const s = subtrahend;
   const meta = minuend[2];
@@ -23,7 +23,7 @@ export function subtractRange(minuend, subtrahend) {
   return diff;
 }
 
-export function mergeRanges(ranges = [], outerRange) {
+export const mergeRanges = (ranges = [], outerRange) => {
   const copy = Array.from(ranges).reverse();
   let solution = [outerRange];
 
