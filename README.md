@@ -25,20 +25,20 @@ const commitments = [
 const { mon, sat } = mergeCommitments(commitments);
 
 // mon
-[
-  ['6AM','9AM', { category: 'awake' }],
-  ['9AM','12PM', { category: 'work' }],
-  ['12PM','1PM', { category: 'food' }],
-  ['1PM','5PM', { category: 'work' }],
-  ['5PM','10PM', { category: 'awake' }],
-];
+// [
+//   ['6AM','9AM', { category: 'awake' }],
+//   ['9AM','12PM', { category: 'work' }],
+//   ['12PM','1PM', { category: 'food' }],
+//   ['1PM','5PM', { category: 'work' }],
+//   ['5PM','10PM', { category: 'awake' }],
+// ];
 
 // sat
-[
-  ['9AM','12PM', { category: 'awake' }],
-  ['12PM','1PM', { category: 'food' }],
-  ['1PM','11PM', { category: 'awake' }],
-];
+// [
+//   ['9AM','12PM', { category: 'awake' }],
+//   ['12PM','1PM', { category: 'food' }],
+//   ['1PM','11PM', { category: 'awake' }],
+// ];
 ```
 
 
