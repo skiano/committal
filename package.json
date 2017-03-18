@@ -1,0 +1,33 @@
+{
+  "name": "committal",
+  "version": "1.0.0",
+  "description": "Merges lists time commitments",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "npm run watch",
+    "build": "babel src -d dist",
+    "test": "npm run build && tape dist/*spec.js | tap-spec",
+    "watch": "nodemon --watch src -q -x 'npm test'",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skiano/committal.git"
+  },
+  "keywords": [
+    "Time"
+  ],
+  "author": "Greg Skiano",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skiano/committal/issues"
+  },
+  "homepage": "https://github.com/skiano/committal#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-latest": "^6.24.0",
+    "nodemon": "^1.11.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.3"
+  }
+}
