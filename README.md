@@ -27,7 +27,11 @@ const timeChunks = commital([basicCommitments, commitments]);
 
 // in should.js
 timeChunks.mon.should.match([
-  
+  ['6AM','9AM', { category: 'awake' }],
+  ['9AM','12PM', { category: 'work' }],
+  ['12PM','1PM', { category: 'food' }],
+  ['1PM','5PM', { category: 'work' }],
+  ['5PM','10PM', { category: 'awake' }],
 ])
 ```
 
