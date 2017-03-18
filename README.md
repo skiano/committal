@@ -11,12 +11,13 @@ const alldays = [...weekdays, ...weekends];
 
 const work = { category: 'work' };
 const food = { category: 'food' };
+const awake = { category: 'awake' };
 
 const commitments = [
-  [...weekdays, ['6AM','10PM']],
-  [...weekdays, ['9AM','11PM']],
-  [...weekdays, ['9AM','5PM', work]],
-  [...alldays, ['12PM','1PM', food]]
+  [...weekdays, ['6AM','10PM', awake]],  // commits to being awake from 6am–10pm on weekdays
+  [...weekends, ['9AM','11PM', awake]],  // commits to being awake from 9am–11pm on weekends
+  [...weekdays, ['9AM','5PM', work]],    // commits to being at work from 9am–5pm on weekdays
+  [...alldays, ['12PM','1PM', food]]     // commits to eating food from 12pm–1pm everyday
 ];
 
 const timeChunks = commital(commitments);
