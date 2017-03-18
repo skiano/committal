@@ -22,7 +22,7 @@ const commitments = [
   [...alldays, ['12PM','1PM', food]],    // commits to eating food from 12pm–1pm everyday
 ];
 
-const plan = mergeCommitments([commitments, commitments]);
+const plan = mergeCommitments(commitments);
 
 // in should.js
 plan.mon.should.match([
