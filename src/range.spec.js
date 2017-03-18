@@ -1,5 +1,5 @@
 import test from 'tape';
-import { subtractRange, mergeRanges } from './ranges';
+import { subtractRange, mergeRanges } from './range';
 
 test('subtractRange', (t) => {
   t.plan(5);

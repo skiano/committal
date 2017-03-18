@@ -1,5 +1,5 @@
 import { getTime } from './time';
-import { mergeRanges } from './ranges';
+import { mergeRanges } from './range';
 
 export const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri'];
 export const weekends = ['sat', 'sun'];
