@@ -5,6 +5,8 @@ Commital takes a list (or lists) of "commitment" objects and merges them into a 
 ## example
 
 ```javascript
+import { mergeCommitments } from 'committal';
+
 const weekdays = ['mon','tues', 'wed', 'thus', 'fri'];
 const weekends = ['sat','sun'];
 const alldays = [...weekdays, ...weekends];
@@ -23,7 +25,7 @@ const moreCommitments = [
   [...alldays, ['12PM','1PM', food]],    // commits to eating food from 12pm–1pm everyday
 ];
 
-const timeChunks = commital([basicCommitments, commitments]);
+const timeChunks = mergeCommitments([basicCommitments, commitments]);
 
 // in should.js
 // look at mondays time chunks
