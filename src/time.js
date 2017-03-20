@@ -4,10 +4,6 @@ const MERIDIAN_RE = /am/i
 const NOON = 12 * 60
 const DAY = 24 * 60
 
-export function getTimeRange (timeRange) {
-  return timeRange.map(getTime)
-}
-
 export function getTime (timeStringOrValue) {
   if (typeof timeStringOrValue === 'string') {
     return timeFromString(timeStringOrValue)
