@@ -30,7 +30,7 @@ export const getOuterRange = (ranges) => (
   ], [Infinity, -Infinity])
 );
 
-export const mergeRanges = (ranges = [], outerRange) => {
+export const mergeRanges = (ranges = []) => {
   const copy = Array.from(ranges).reverse();
   let solution = [getOuterRange(ranges)];
 
