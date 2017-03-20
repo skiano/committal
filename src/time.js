@@ -51,7 +51,7 @@ export function timeToString (time) {
   }
   const meridaian = time < NOON ? 'AM' : 'PM'
 
-  return `${twoDigit(hours)}:${twoDigit(minutes)} ${meridaian}`
+  return `${hours}:${twoDigit(minutes)} ${meridaian}`;
 }
 
 function twoDigit (n) {
