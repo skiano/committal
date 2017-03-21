@@ -37,5 +37,3 @@ const { mon, sat } = mergeCommitments(commitments);
 //   [ '1PM','11PM', { category: 'awake' }],
 // ];
 ```
-
-

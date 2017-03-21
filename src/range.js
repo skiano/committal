@@ -23,9 +23,16 @@ export const subtractRange = (minuend, subtrahend) => {
   return diff;
 }
 
-export const mergeRanges = (ranges = [], outerRange) => {
+export const getOuterRange = (ranges) => (
+  ranges.reduce((outerRange, range) => [
+    Math.min(range[0], outerRange[0]),
+    Math.max(range[1], outerRange[1]),
+  ], [Infinity, -Infinity])
+);
+
+export const mergeRanges = (ranges = []) => {
   const copy = Array.from(ranges).reverse();
-  let solution = [outerRange];
+  let solution = [getOuterRange(ranges)];
 
   while (copy.length) {
     const next = copy.pop();

@@ -4,10 +4,6 @@ const MERIDIAN_RE = /am/i
 const NOON = 12 * 60
 const DAY = 24 * 60
 
-export function getTimeRange (timeRange) {
-  return timeRange.map(getTime)
-}
-
 export function getTime (timeStringOrValue) {
   if (typeof timeStringOrValue === 'string') {
     return timeFromString(timeStringOrValue)
@@ -51,7 +47,7 @@ export function timeToString (time) {
   }
   const meridaian = time < NOON ? 'AM' : 'PM'
 
-  return `${twoDigit(hours)}:${twoDigit(minutes)} ${meridaian}`
+  return `${hours}:${twoDigit(minutes)} ${meridaian}`;
 }
 
 function twoDigit (n) {
